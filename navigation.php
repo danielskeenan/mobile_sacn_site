@@ -5,4 +5,7 @@ return [
         'url' => 'docs/getting-started',
         'children' => [],
     ],
+    'Releases' => [
+        'url' => 'releases',
+    ],
 ];

@@ -13,11 +13,18 @@
     "php": "^8.1",
     "tightenco/jigsaw": "^1.3",
     "tightenco/jigsaw-docs-template": "^1.1",
-    "samdark/sitemap": "^2.2.1"
+    "samdark/sitemap": "^2.2.1",
+    "symfony/http-client": "^6.0",
+    "nyholm/psr7": "^1.5",
+    "knplabs/github-api": "^3.6"
   },
   "autoload": {
     "psr-4": {
-      "App\\Listeners\\": "listeners/"
+      "App\\Listeners\\": "listeners/",
+      "App\\Collections\\": "collections/"
     }
+  },
+  "require-dev": {
+    "vimeo/psalm": "^4.23"
   }
 }
