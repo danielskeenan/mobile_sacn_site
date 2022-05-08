@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ <url>
+  <loc>https://mobilesacn.dankeenan.org/releases</loc>
+  <lastmod>2022-05-08T20:42:48+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>https://mobilesacn.dankeenan.org/404.html</loc>
+  <lastmod>2022-05-08T20:42:48+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>https://mobilesacn.dankeenan.org/releases/dev-1652025181</loc>
+  <lastmod>2022-05-08T20:42:48+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>https://mobilesacn.dankeenan.org</loc>
+  <lastmod>2022-05-08T20:42:48+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>https://mobilesacn.dankeenan.org/docs/getting-started</loc>
+  <lastmod>2022-05-08T20:42:48+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+</urlset>
