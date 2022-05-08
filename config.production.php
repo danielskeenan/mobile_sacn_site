@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'baseUrl' => 'https://jigsaw-docs-template.tighten.co',
+    'baseUrl' => 'https://mobilesacn.dankeenan.org',
     'production' => true,
 
     // DocSearch credentials

@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push: ~
+  pull_request: ~
+  workflow_dispatch: ~
+
+env:
+  # Increment when the cache must be invalidated.
+  CACHE_IX: 0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          ini-values: display_errors=On
+          extensions: xml, zip
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          CACHE_NAME: node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ github.job }}-${{ env.CACHE_NAME }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ github.job }}-${{ env.CACHE_NAME }}-
+            ${{ runner.os }}-${{ github.job }}-
+      - name: Install JS dependencies
+        run: npm install
+      - name: Cache PHP dependencies
+        uses: actions/cache@v2
+        env:
+          CACHE_NAME: composer
+        with:
+          path: vendor
+          key: ${{ runner.os }}-${{ github.job }}-${{ env.CACHE_NAME }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-${{ github.job }}-${{ env.CACHE_NAME }}-
+      - name: Install PHP dependencies
+        run: composer install --no-dev --prefer-dist --optimize-autoloader
+      - name: Build site
+        run: vendor/bin/jigsaw production
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ github.workspace }}/build_production

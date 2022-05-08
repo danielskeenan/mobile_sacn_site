@@ -18,13 +18,13 @@
     "nyholm/psr7": "^1.5",
     "knplabs/github-api": "^3.6"
   },
+  "require-dev": {
+    "vimeo/psalm": "^4.23"
+  },
   "autoload": {
     "psr-4": {
       "App\\Listeners\\": "listeners/",
       "App\\Collections\\": "collections/"
     }
-  },
-  "require-dev": {
-    "vimeo/psalm": "^4.23"
   }
 }
