@@ -11,12 +11,9 @@
                 <h1 class="leading-none mb-2">{{ $page->title }}</h1>
                 <div class="DocSearch-content">
                     @yield('content')
-                    <h2>Downloads</h2>
-                    <ul>
-                        @foreach($page->assets as $platform => $url)
-                            <li><a href="{{$url}}">{{$platform}}</a></li>
-                        @endforeach
-                    </ul>
+                </div>
+                <div>
+                    @include('_components.release-assets', ['release' => $page])
                 </div>
             </div>
         </div>
