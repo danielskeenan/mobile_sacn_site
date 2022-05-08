@@ -43,6 +43,9 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-dev --prefer-dist --optimize-autoloader
       - name: Build site
+        env:
+          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
         run: vendor/bin/jigsaw build production
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
