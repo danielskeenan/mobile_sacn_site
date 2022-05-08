@@ -1,0 +1,28 @@
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:msacn="https://mobilesacn.dankeenan.org/appcast">
+    <channel>
+        <title>Mobile sACN</title>
+        <link>{{$page->baseUrl}}/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        @foreach($releases as $release)
+            @foreach($release['assets'] as $asset)
+                <item>
+                    <title>{{$release->title}}</title>
+                    <link>{{$page->baseUrl}}/releases/{{$release['version']}}</link>
+                    <sparkle:channel>{{$release['channel']}}</sparkle:channel>
+                    <msacn:platform>{{$asset['platform']}}</msacn:platform>
+                    <msacn:commit>{{$release['commit']}}</msacn:commit>
+                    <sparkle:version>{{$release['version']}}</sparkle:version>
+                    <pubDate>{{$release->getDate()->toRssString()}}</pubDate>
+                    <enclosure url="{{$asset['url']}}"/>
+                    <description><![CDATA[
+                        {!! $release->getContent() !!}
+                        ]]>
+                    </description>
+                    <sparkle:fullReleaseNotesLink>{{$page->baseUrl}}/releases</sparkle:fullReleaseNotesLink>
+                </item>
+            @endforeach
+        @endforeach
+    </channel>
+</rss>

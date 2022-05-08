@@ -32,7 +32,7 @@ class GitHubRelease
             'version' => $this->version,
             'commit' => $this->commitSha,
             'published' => $this->pubDate,
-            'channel' => $this->channel->name,
+            'channel' => strtolower($this->channel->name),
             'assets' => $assets,
             'content' => $this->notes,
         ];
