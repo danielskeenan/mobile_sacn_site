@@ -1,9 +1,5 @@
 <div class="flex flex-col mb-4">
-    <p class="text-gray-700 font-medium my-2">
-        {{ $release->getDate()->toDateString() }}
-    </p>
-
-    <h2 class="text-3xl mt-0">
+    <h2 class="text-3xl my-0">
         <a href="{{ $release->getUrl() }}"
            title="Read more - {{ $release->title }}"
            class="text-gray-900 font-extrabold">
@@ -11,7 +7,10 @@
         </a>
     </h2>
 
-    <div>{!! $release->getContent() !!}</div>
+    <div>
+        <p class="mt-0">Released {{ $release->getDate()->toDateString() }}</p>
+        {!! $release->getContent() !!}
+    </div>
 
     <div>
         @include('_components.release-assets', ['release' => $release])

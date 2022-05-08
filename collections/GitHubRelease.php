@@ -20,7 +20,11 @@ class GitHubRelease
         /** @var ReleasePlatform $platform */
         /** @var string $asset */
         foreach ($this->assets as $platform => $asset) {
-            $assets[$platform->humanName()] = $asset;
+            $assets[] = [
+                'platform' => $platform->name,
+                'platformTitle' => $platform->humanName(),
+                'url' => $asset,
+            ];
         }
 
         return [

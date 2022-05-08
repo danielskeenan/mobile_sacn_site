@@ -6,14 +6,14 @@ enum ReleasePlatform
 {
     case Windows;
     case MacOs;
-    case Debian;
+    case Ubuntu;
 
     public function filenameRegex(): string
     {
         return match ($this) {
             ReleasePlatform::Windows => '`^.+-Windows\.msi$`',
             ReleasePlatform::MacOs => '`^.+-Darwin\.dmg$`',
-            ReleasePlatform::Debian => '`^.+-Linux\.deb$`',
+            ReleasePlatform::Ubuntu => '`^.+-Linux\.deb$`',
         };
     }
 
@@ -22,7 +22,7 @@ enum ReleasePlatform
         return match ($this) {
             ReleasePlatform::Windows => 'Windows',
             ReleasePlatform::MacOs => 'macOS',
-            ReleasePlatform::Debian => 'Linux (Debian)',
+            ReleasePlatform::Ubuntu => 'Linux (Ubuntu)',
         };
     }
 
