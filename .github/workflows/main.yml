@@ -43,7 +43,7 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-dev --prefer-dist --optimize-autoloader
       - name: Build site
-        run: vendor/bin/jigsaw production
+        run: vendor/bin/jigsaw build production
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
