@@ -2,11 +2,11 @@
 
 namespace App\Collections;
 
-enum ReleasePlatform
+enum ReleasePlatform: string
 {
-    case Windows;
-    case MacOs;
-    case Ubuntu;
+    case Windows = 'windows';
+    case MacOs = 'macos';
+    case Ubuntu = 'ubuntu';
 
     public function filenameRegex(): string
     {
