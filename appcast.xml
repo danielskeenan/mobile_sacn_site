@@ -25,22 +25,6 @@
                     <title>Latest dev build</title>
                     <link>https://mobilesacn.dankeenan.org/releases/dev-1652545057</link>
                     <sparkle:channel>dev</sparkle:channel>
-                    <msacn:platform>Ubuntu</msacn:platform>
-                    <msacn:commit>67b076e0a22c42f545ef39404247a438773c8269</msacn:commit>
-                    <sparkle:version>dev-1652545057</sparkle:version>
-                    <pubDate>Sat, 14 May 2022 16:17:37 +0000</pubDate>
-                    <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1-Linux.deb"/>
-                    <description><![CDATA[
-                        <p>Last updated Sat May 14 16:17:36 UTC 2022.</p>
-
-                        ]]>
-                    </description>
-                    <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases</sparkle:fullReleaseNotesLink>
-                </item>
-                            <item>
-                    <title>Latest dev build</title>
-                    <link>https://mobilesacn.dankeenan.org/releases/dev-1652545057</link>
-                    <sparkle:channel>dev</sparkle:channel>
                     <msacn:platform>Windows</msacn:platform>
                     <msacn:commit>67b076e0a22c42f545ef39404247a438773c8269</msacn:commit>
                     <sparkle:version>dev-1652545057</sparkle:version>
