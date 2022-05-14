@@ -13,7 +13,7 @@ enum ReleasePlatform
         return match ($this) {
             ReleasePlatform::Windows => '`^.+-Windows\.msi$`',
             ReleasePlatform::MacOs => '`^.+-Darwin\.dmg$`',
-            ReleasePlatform::Ubuntu => '`^.+-Linux\.deb$`',
+            ReleasePlatform::Ubuntu => '`^.+\.deb$`',
         };
     }
 
