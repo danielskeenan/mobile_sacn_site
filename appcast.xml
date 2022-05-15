@@ -6,51 +6,34 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
                                     <item>
-                    <title>Latest dev build</title>
-                    <link>https://mobilesacn.dankeenan.org/releases/dev-1652572004</link>
+                    <title>dev-latest</title>
+                    <link>https://mobilesacn.dankeenan.org/releases/dev-1652609753</link>
                     <sparkle:channel>dev</sparkle:channel>
                     <sparkle:os>windows</sparkle:os>
                     <msacn:commit>5e7c8cb4a44cfbc27662f6f87983b29f24eb097f</msacn:commit>
-                    <sparkle:version>dev-1652572004</sparkle:version>
-                    <pubDate>Sat, 14 May 2022 23:46:44 +0000</pubDate>
+                    <sparkle:version>dev-1652609753</sparkle:version>
+                    <pubDate>Sun, 15 May 2022 10:15:53 +0000</pubDate>
                     <sparkle:installerArguments>/passive</sparkle:installerArguments>
-                    <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1652568598-Windows.msi"/>
+                    <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1652578312-Windows.msi"/>
                     <description><![CDATA[
-                        <p>Last updated Sat May 14 23:46:42 UTC 2022.</p>
+                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/dev-latest</p>
 
                         ]]>
                     </description>
                     <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases</sparkle:fullReleaseNotesLink>
                 </item>
                             <item>
-                    <title>Latest dev build</title>
-                    <link>https://mobilesacn.dankeenan.org/releases/dev-1652572004</link>
+                    <title>dev-latest</title>
+                    <link>https://mobilesacn.dankeenan.org/releases/dev-1652609753</link>
                     <sparkle:channel>dev</sparkle:channel>
                     <sparkle:os>macos</sparkle:os>
                     <msacn:commit>5e7c8cb4a44cfbc27662f6f87983b29f24eb097f</msacn:commit>
-                    <sparkle:version>dev-1652572004</sparkle:version>
-                    <pubDate>Sat, 14 May 2022 23:46:44 +0000</pubDate>
+                    <sparkle:version>dev-1652609753</sparkle:version>
+                    <pubDate>Sun, 15 May 2022 10:15:53 +0000</pubDate>
                     <sparkle:installerArguments>/passive</sparkle:installerArguments>
-                    <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1652571717-Darwin.dmg"/>
+                    <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1652609482-Darwin.dmg"/>
                     <description><![CDATA[
-                        <p>Last updated Sat May 14 23:46:42 UTC 2022.</p>
-
-                        ]]>
-                    </description>
-                    <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases</sparkle:fullReleaseNotesLink>
-                </item>
-                            <item>
-                    <title>Latest dev build</title>
-                    <link>https://mobilesacn.dankeenan.org/releases/dev-1652572004</link>
-                    <sparkle:channel>dev</sparkle:channel>
-                    <sparkle:os>ubuntu</sparkle:os>
-                    <msacn:commit>5e7c8cb4a44cfbc27662f6f87983b29f24eb097f</msacn:commit>
-                    <sparkle:version>dev-1652572004</sparkle:version>
-                    <pubDate>Sat, 14 May 2022 23:46:44 +0000</pubDate>
-                    <sparkle:installerArguments>/passive</sparkle:installerArguments>
-                    <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn_0.0.1.1652567916_amd64.deb"/>
-                    <description><![CDATA[
-                        <p>Last updated Sat May 14 23:46:42 UTC 2022.</p>
+                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/dev-latest</p>
 
                         ]]>
                     </description>
