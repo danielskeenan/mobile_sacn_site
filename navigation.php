@@ -8,4 +8,7 @@ return [
     'Releases' => [
         'url' => 'releases',
     ],
+    'Apt Repository' => [
+        'url' => 'apt',
+    ],
 ];
