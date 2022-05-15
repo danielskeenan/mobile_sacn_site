@@ -7,11 +7,11 @@ section: content
 # Apt Repository
 
 An apt repository is available at [https://apt.mobilesacn.dankeenan.org](https://apt.mobilesacn.dankeenan.org). Releases
-are signed with [this key](mobilesacn-archive-keyring.gpg).
+are signed with [this key](/mobilesacn-archive-keyring.gpg).
 
 ## Setup
 
-Install the [mobile-sacn-repo package](mobile-sacn-repo_1.0.0_all.deb), or run:
+Install the [mobile-sacn-repo package](/mobile-sacn-repo_1.0.0_all.deb), or run:
 
 ```shell
 wget -O- https://mobilesacn.dankeenan.org/mobilesacn-archive-keyring.gpg | sudo tee /usr/share/keyrings/mobilesacn-archive-keyring.gpg`
