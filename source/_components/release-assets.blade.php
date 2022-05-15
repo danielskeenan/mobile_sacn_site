@@ -3,9 +3,9 @@
     @foreach($release->assets as $asset)
         @php
             $iconClass = match($asset['platform']) {
-                'Windows' => 'fa-brands fa-windows',
-                'MacOs' => 'fa-brands fa-apple',
-                'Ubuntu' => 'fa-brands fa-ubuntu',
+                'windows' => 'fa-brands fa-windows',
+                'macos' => 'fa-brands fa-apple',
+                'ubuntu' => 'fa-brands fa-ubuntu',
                 default => null,
             }
         @endphp
