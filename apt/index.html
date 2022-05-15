@@ -7,9 +7,9 @@
         <meta name="description" content="Remote sACN testing tool">
 
         <meta property="og:site_name" content="Mobile sACN"/>
-        <meta property="og:title" content="Getting Started | Mobile sACN"/>
+        <meta property="og:title" content="Apt Repository | Mobile sACN"/>
         <meta property="og:description" content="Remote sACN testing tool"/>
-        <meta property="og:url" content="https://mobilesacn.dankeenan.org/docs/getting-started"/>
+        <meta property="og:url" content="https://mobilesacn.dankeenan.org/apt"/>
         <meta property="og:image" content="/assets/img/logo.svg"/>
         <meta property="og:type" content="website"/>
 
@@ -17,7 +17,7 @@
         <meta name="twitter:card" content="summary_large_image">
 
         
-        <title>Mobile sACN | Getting Started</title>
+        <title>Mobile sACN | Apt Repository</title>
 
         <link rel="home" href="https://mobilesacn.dankeenan.org">
         <link rel="icon" href="/favicon.ico">
@@ -72,7 +72,7 @@
             <li class="pl-4">
             
         <a href="/docs/getting-started"
-            class="lvl0  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
+            class="lvl0   nav-menu__item hover:text-blue-500"
         >
             Getting Started
         </a>
@@ -93,7 +93,7 @@
             <li class="pl-4">
             
         <a href="/apt"
-            class="lvl0   nav-menu__item hover:text-blue-500"
+            class="lvl0  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
         >
             Apt Repository
         </a>
@@ -103,28 +103,24 @@
         </nav>
 
         <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
-            <h1>Getting Started</h1>
+            <h1>Apt Repository</h1>
 
-<p><em>THIS IS PRERELEASE SOFTWARE STILL UNDERGOING DEVELOPMENT!</em>  Expect occasional problems. If the program behaves badly,
-please report an issue <a href="https://github.com/danielskeenan/mobile_sacn/issues">here</a>.</p>
+<p>An apt repository is available at <a href="https://apt.mobilesacn.dankeenan.org">https://apt.mobilesacn.dankeenan.org</a>. Releases
+are signed with <a href="mobilesacn-archive-keyring.gpg">this key</a>.</p>
 
-<h2>Usage</h2>
+<h2>Setup</h2>
 
-<ol>
-<li>Start the program. Select the network interfaces that will run the web UI
-and sACN.
+<p>Install the <a href="mobile-sacn-repo_1.0.0_all.deb">mobile-sacn-repo package</a>, or run:</p>
 
-<ul>
-<li>If you're on a lighting network without WiFi, consider using the WiFi
-sharing feature built in to your operating system. The WiFi interface will
-handle the web UI and the wired interface will run sACN.</li>
-<li>If your network has WiFi, select the same interface for both options.</li>
-</ul></li>
-<li>Click "Start" and use your mobile device's camera to scan the QR code and
-open the web UI.</li>
-</ol>
+<pre><code class="language-shell">wget -O- https://mobilesacn.dankeenan.org/mobilesacn-archive-keyring.gpg | sudo tee /usr/share/keyrings/mobilesacn-archive-keyring.gpg`
+echo deb [arch=amd64 signed-by=/usr/share/keyrings/mobilesacn-archive-keyring.gpg] https://apt.mobilesacn.dankeenan.org stable main | tee /etc/apt/sources.list.d/mobile-sacn.list
+</code></pre>
 
-<p><img src="/assets/img/screenshots/base_started.png" alt="Screenshot showing selected interfaces and QR code" /></p>
+<p>Then install the <code>mobilesacn</code> package:</p>
+
+<pre><code class="language-shell">sudo apt-get update
+sudo apt-get install mobilesacn
+</code></pre>
         </div>
     </div>
 </section>
