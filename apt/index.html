@@ -106,11 +106,11 @@
             <h1>Apt Repository</h1>
 
 <p>An apt repository is available at <a href="https://apt.mobilesacn.dankeenan.org">https://apt.mobilesacn.dankeenan.org</a>. Releases
-are signed with <a href="mobilesacn-archive-keyring.gpg">this key</a>.</p>
+are signed with <a href="/mobilesacn-archive-keyring.gpg">this key</a>.</p>
 
 <h2>Setup</h2>
 
-<p>Install the <a href="mobile-sacn-repo_1.0.0_all.deb">mobile-sacn-repo package</a>, or run:</p>
+<p>Install the <a href="/mobile-sacn-repo_1.0.0_all.deb">mobile-sacn-repo package</a>, or run:</p>
 
 <pre><code class="language-shell">wget -O- https://mobilesacn.dankeenan.org/mobilesacn-archive-keyring.gpg | sudo tee /usr/share/keyrings/mobilesacn-archive-keyring.gpg`
 echo deb [arch=amd64 signed-by=/usr/share/keyrings/mobilesacn-archive-keyring.gpg] https://apt.mobilesacn.dankeenan.org stable main | tee /etc/apt/sources.list.d/mobile-sacn.list
