@@ -7,14 +7,14 @@
         <language>en</language>
                         <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1652611833</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653175969</link>
             <sparkle:channel>dev</sparkle:channel>
-            <sparkle:os>windows</sparkle:os>
-            <msacn:commit>5e7c8cb4a44cfbc27662f6f87983b29f24eb097f</msacn:commit>
-            <sparkle:version>0.0.1.1652611833</sparkle:version>
-            <pubDate>Sun, 15 May 2022 11:12:07 +0000</pubDate>
-            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1652611833-Windows.msi"
-                       length="14058229"
+            <sparkle:os>macos</sparkle:os>
+            <msacn:commit>773a463c77d7830dbed3b183f8b9ab9bf8e2d5f2</msacn:commit>
+            <sparkle:version>0.0.1.1653175969</sparkle:version>
+            <pubDate>Sat, 21 May 2022 23:38:10 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653175969-Darwin.dmg"
+                       length="13145332"
                        type="application/octet-stream"
             />
             <description><![CDATA[
@@ -26,14 +26,14 @@
         </item>
                 <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1652611833</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653175969</link>
             <sparkle:channel>dev</sparkle:channel>
-            <sparkle:os>macos</sparkle:os>
-            <msacn:commit>5e7c8cb4a44cfbc27662f6f87983b29f24eb097f</msacn:commit>
-            <sparkle:version>0.0.1.1652611833</sparkle:version>
-            <pubDate>Sun, 15 May 2022 11:12:07 +0000</pubDate>
-            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1652612832-Darwin.dmg"
-                       length="13143133"
+            <sparkle:os>windows</sparkle:os>
+            <msacn:commit>773a463c77d7830dbed3b183f8b9ab9bf8e2d5f2</msacn:commit>
+            <sparkle:version>0.0.1.1653175969</sparkle:version>
+            <pubDate>Sat, 21 May 2022 23:38:10 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653176037-Windows.msi"
+                       length="15033197"
                        type="application/octet-stream"
             />
             <description><![CDATA[
