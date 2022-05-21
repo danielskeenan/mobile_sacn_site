@@ -13,7 +13,6 @@
             <msacn:commit>5e7c8cb4a44cfbc27662f6f87983b29f24eb097f</msacn:commit>
             <sparkle:version>0.0.1.1652611833</sparkle:version>
             <pubDate>Sun, 15 May 2022 11:12:07 +0000</pubDate>
-            <sparkle:installerArguments>/passive</sparkle:installerArguments>
             <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1652611833-Windows.msi"
                        length="14058229"
                        type="application/octet-stream"
@@ -33,7 +32,6 @@
             <msacn:commit>5e7c8cb4a44cfbc27662f6f87983b29f24eb097f</msacn:commit>
             <sparkle:version>0.0.1.1652611833</sparkle:version>
             <pubDate>Sun, 15 May 2022 11:12:07 +0000</pubDate>
-            <sparkle:installerArguments>/passive</sparkle:installerArguments>
             <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1652612832-Darwin.dmg"
                        length="13143133"
                        type="application/octet-stream"
