@@ -15,7 +15,6 @@
             <msacn:commit>{{$release['commit']}}</msacn:commit>
             <sparkle:version>{{$release['version']}}</sparkle:version>
             <pubDate>{{$release->getDate()->toRssString()}}</pubDate>
-            <sparkle:installerArguments>/passive</sparkle:installerArguments>
             <enclosure url="{{$asset['url']}}"
                        length="{{$asset['size']}}"
                        type="{{$asset['contentType']}}"
