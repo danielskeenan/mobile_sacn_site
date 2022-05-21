@@ -135,6 +135,7 @@ class GitHubReleaseCollection
     private static function createReleaseFromGithub(array $releaseInfo): GitHubRelease
     {
         $publishedDate = Carbon::createFromTimestampUTC(0);
+        $version = '';
         $assets = [];
         foreach ($releaseInfo['assets'] as $assetInfo) {
             $platform = ReleasePlatform::fromFilename($assetInfo['name']);
@@ -143,12 +144,16 @@ class GitHubReleaseCollection
                 if ($publishedDate->isBefore($asset->pubDate)) {
                     $publishedDate = $asset->pubDate;
                 }
+                if (empty($version)
+                    && preg_match('`[-_](\d+\.\d+\.\d+\.\d+)[-_]`', $assetInfo['name'], $matches) == 1) {
+                    $version = $matches[1];
+                }
                 $assets[] = $asset;
             }
         }
         $release = new GitHubRelease();
         $release->title = $releaseInfo['name'];
-        $release->version = "dev-".$publishedDate->timestamp;
+        $release->version = $version;
         $release->pubDate = $publishedDate;
         $release->channel = ReleaseChannel::Dev;
         $release->assets = $assets;
