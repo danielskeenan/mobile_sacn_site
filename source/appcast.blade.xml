@@ -6,24 +6,27 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         @foreach($releases as $release)
-            @foreach($release['assets'] as $asset)
-                <item>
-                    <title>{{$release->title}}</title>
-                    <link>{{$page->baseUrl}}/releases/{{$release['version']}}</link>
-                    <sparkle:channel>{{$release['channel']}}</sparkle:channel>
-                    <sparkle:os>{{$asset['platform']}}</sparkle:os>
-                    <msacn:commit>{{$release['commit']}}</msacn:commit>
-                    <sparkle:version>{{$release['version']}}</sparkle:version>
-                    <pubDate>{{$release->getDate()->toRssString()}}</pubDate>
-                    <sparkle:installerArguments>/passive</sparkle:installerArguments>
-                    <enclosure url="{{$asset['url']}}"/>
-                    <description><![CDATA[
+        @foreach($release['assets'] as $asset)
+        <item>
+            <title>{{$release->title}}</title>
+            <link>{{$page->baseUrl}}/releases/{{$release['version']}}</link>
+            <sparkle:channel>{{$release['channel']}}</sparkle:channel>
+            <sparkle:os>{{$asset['platform']}}</sparkle:os>
+            <msacn:commit>{{$release['commit']}}</msacn:commit>
+            <sparkle:version>{{$release['version']}}</sparkle:version>
+            <pubDate>{{$release->getDate()->toRssString()}}</pubDate>
+            <sparkle:installerArguments>/passive</sparkle:installerArguments>
+            <enclosure url="{{$asset['url']}}"
+                       length="{{$asset['size']}}"
+                       type="{{$asset['contentType']}}"
+            />
+            <description><![CDATA[
                         {!! $release->getContent() !!}
                         ]]>
-                    </description>
-                    <sparkle:fullReleaseNotesLink>{{$page->baseUrl}}/releases</sparkle:fullReleaseNotesLink>
-                </item>
-            @endforeach
+            </description>
+            <sparkle:fullReleaseNotesLink>{{$page->baseUrl}}/releases</sparkle:fullReleaseNotesLink>
+        </item>
+        @endforeach
         @endforeach
     </channel>
 </rss>

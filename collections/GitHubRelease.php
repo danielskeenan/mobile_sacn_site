@@ -11,29 +11,19 @@ class GitHubRelease
     public ?string $commitSha = null;
     public Carbon $pubDate;
     public ReleaseChannel $channel;
-    public \WeakMap $assets;
+    public array $assets;
     public string $notes;
 
     public function toCollectionItem()
     {
-        $assets = [];
-        /** @var ReleasePlatform $platform */
-        /** @var string $asset */
-        foreach ($this->assets as $platform => $asset) {
-            $assets[] = [
-                'platform' => $platform->value,
-                'platformTitle' => $platform->humanName(),
-                'url' => $asset,
-            ];
-        }
-
         return [
             'title' => $this->title,
             'version' => $this->version,
             'commit' => $this->commitSha,
             'published' => $this->pubDate,
             'channel' => strtolower($this->channel->name),
-            'assets' => $assets,
+            // Jigsaw will only pass this to templates if it is an array.
+            'assets' => array_map(fn(ReleaseAsset $asset): array => $asset->toArray(), $this->assets),
             'content' => $this->notes,
         ];
     }

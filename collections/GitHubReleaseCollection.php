@@ -135,19 +135,15 @@ class GitHubReleaseCollection
     private static function createReleaseFromGithub(array $releaseInfo): GitHubRelease
     {
         $publishedDate = Carbon::createFromTimestampUTC(0);
-        $assets = new \WeakMap();
+        $assets = [];
         foreach ($releaseInfo['assets'] as $assetInfo) {
-            $assetDate = Carbon::createFromIsoFormat(
-                "YYYY-MM-DD\THH:mm:ss\Z",
-                $assetInfo['updated_at'],
-                "UTC"
-            );
-            if ($publishedDate->isBefore($assetDate)) {
-                $publishedDate = $assetDate;
-            }
             $platform = ReleasePlatform::fromFilename($assetInfo['name']);
             if ($platform !== null) {
-                $assets[$platform] = $assetInfo['browser_download_url'];
+                $asset = ReleaseAsset::createFromGitHub($assetInfo);
+                if ($publishedDate->isBefore($asset->pubDate)) {
+                    $publishedDate = $asset->pubDate;
+                }
+                $assets[] = $asset;
             }
         }
         $release = new GitHubRelease();
