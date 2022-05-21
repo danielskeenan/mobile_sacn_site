@@ -139,7 +139,7 @@ class GitHubReleaseCollection
         $assets = [];
         foreach ($releaseInfo['assets'] as $assetInfo) {
             $platform = ReleasePlatform::fromFilename($assetInfo['name']);
-            if ($platform !== null) {
+            if ($platform !== null && $platform->usesUpdater()) {
                 $asset = ReleaseAsset::createFromGitHub($assetInfo);
                 if ($publishedDate->isBefore($asset->pubDate)) {
                     $publishedDate = $asset->pubDate;

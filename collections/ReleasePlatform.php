@@ -26,6 +26,14 @@ enum ReleasePlatform: string
         };
     }
 
+    public function usesUpdater(): bool
+    {
+        return match ($this) {
+            ReleasePlatform::Windows, ReleasePlatform::MacOs => true,
+            default => false,
+        };
+    }
+
     public static function fromFilename(string $filename): ?self
     {
         foreach (self::cases() as $platform) {
