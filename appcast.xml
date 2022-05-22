@@ -7,13 +7,63 @@
         <language>en</language>
                         <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653175969</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
+            <sparkle:channel>dev</sparkle:channel>
+            <sparkle:os>windows</sparkle:os>
+            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
+            <sparkle:version>0.0.1.1653176037</sparkle:version>
+            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653176037-Windows.msi"
+                       sparkle:version="0.0.1.1653176037"
+                       sparkle:dsaSignature="MD4CHQDgPl3i7WcE7UPf1o+O6GzphQlGTXFGpOAVpJkDAh0AqEeTSWsrM9VAgXnu
+v69pT+Jd8kqCa+pxzr66QA==
+"
+                       length="15033197"
+                       type="application/octet-stream"
+            />
+            <description><![CDATA[
+                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/dev-latest</p>
+
+                        ]]>
+            </description>
+            <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases</sparkle:fullReleaseNotesLink>
+        </item>
+                <item>
+            <title>dev-latest</title>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
+            <sparkle:channel>dev</sparkle:channel>
+            <sparkle:os>windows</sparkle:os>
+            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
+            <sparkle:version>0.0.1.1653176037</sparkle:version>
+            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653176037-Windows.zip"
+                       sparkle:version="0.0.1.1653176037"
+                       sparkle:dsaSignature="MD0CHQCn2P+41LJ7pHTodXPgqCxTtr0h6rRo67l0MlYvAhxELXMlM1UcWOJ1r1+X
+uRVMbLRsWh8Qu2wkM2a6
+"
+                       length="14769435"
+                       type="application/zip"
+            />
+            <description><![CDATA[
+                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/dev-latest</p>
+
+                        ]]>
+            </description>
+            <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases</sparkle:fullReleaseNotesLink>
+        </item>
+                <item>
+            <title>dev-latest</title>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
             <sparkle:channel>dev</sparkle:channel>
             <sparkle:os>macos</sparkle:os>
-            <msacn:commit>773a463c77d7830dbed3b183f8b9ab9bf8e2d5f2</msacn:commit>
-            <sparkle:version>0.0.1.1653175969</sparkle:version>
-            <pubDate>Sat, 21 May 2022 23:38:10 +0000</pubDate>
+            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
+            <sparkle:version>0.0.1.1653176037</sparkle:version>
+            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
             <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653175969-Darwin.dmg"
+                       sparkle:version="0.0.1.1653176037"
+                       sparkle:dsaSignature="MDwCHEfOx6xMb2Q3WW+kpqee7Z6llPurCjx/RMWkG/wCHCLjsBYYxTZr5AT9EQBp
+Kvw2uqihcyXz5W2clRY=
+"
                        length="13145332"
                        type="application/octet-stream"
             />
@@ -26,15 +76,42 @@
         </item>
                 <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653175969</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
             <sparkle:channel>dev</sparkle:channel>
-            <sparkle:os>windows</sparkle:os>
-            <msacn:commit>773a463c77d7830dbed3b183f8b9ab9bf8e2d5f2</msacn:commit>
-            <sparkle:version>0.0.1.1653175969</sparkle:version>
-            <pubDate>Sat, 21 May 2022 23:38:10 +0000</pubDate>
-            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653176037-Windows.msi"
-                       length="15033197"
+            <sparkle:os>ubuntu</sparkle:os>
+            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
+            <sparkle:version>0.0.1.1653176037</sparkle:version>
+            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobilesacn_0.0.1.1653175601_amd64.deb"
+                       sparkle:version="0.0.1.1653176037"
+                       sparkle:dsaSignature="MDwCHG01bk+RJVUMq7f/J5708UVccLmlrVbyqj4ppR4CHDRIAiLK9p64gB/BDDkq
+mPb5q2UCdqsxDgFnKWA=
+"
+                       length="3064204"
                        type="application/octet-stream"
+            />
+            <description><![CDATA[
+                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/dev-latest</p>
+
+                        ]]>
+            </description>
+            <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases</sparkle:fullReleaseNotesLink>
+        </item>
+                <item>
+            <title>dev-latest</title>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
+            <sparkle:channel>dev</sparkle:channel>
+            <sparkle:os>ubuntu</sparkle:os>
+            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
+            <sparkle:version>0.0.1.1653176037</sparkle:version>
+            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653175601-Linux.tar.gz"
+                       sparkle:version="0.0.1.1653176037"
+                       sparkle:dsaSignature="MD0CHFT+5WokvJxRemtKXFt0jXxd0r8SgvkjVJnWbJ8CHQDRE+NQlntFsskKrSxj
+9e3LBKqkJyK7FirNBCD2
+"
+                       length="3058226"
+                       type="application/gzip"
             />
             <description><![CDATA[
                         <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/dev-latest</p>
