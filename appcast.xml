@@ -7,18 +7,18 @@
         <language>en</language>
                         <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653235309</link>
             <sparkle:channel>dev</sparkle:channel>
             <sparkle:os>windows</sparkle:os>
-            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
-            <sparkle:version>0.0.1.1653176037</sparkle:version>
-            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
-            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653176037-Windows.msi"
-                       sparkle:version="0.0.1.1653176037"
-                       sparkle:dsaSignature="MD4CHQDgPl3i7WcE7UPf1o+O6GzphQlGTXFGpOAVpJkDAh0AqEeTSWsrM9VAgXnu
-v69pT+Jd8kqCa+pxzr66QA==
+            <msacn:commit>8914eb411483d6b5288dd03325f77738c7678a8a</msacn:commit>
+            <sparkle:version>0.0.1.1653235309</sparkle:version>
+            <pubDate>Sun, 22 May 2022 16:13:25 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653235514-Windows.msi"
+                       sparkle:version="0.0.1.1653235309"
+                       sparkle:dsaSignature="MD0CHQDAcjAGiMcfa0ykoxzeHp4BalmOXp1o/rp2kL5cAhwbHeGcRM4Zn8uXW41O
+bEXLT5uEAsObXNFy6yrD
 "
-                       length="15033197"
+                       length="17065997"
                        type="application/octet-stream"
             />
             <description><![CDATA[
@@ -30,18 +30,18 @@ v69pT+Jd8kqCa+pxzr66QA==
         </item>
                 <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653235309</link>
             <sparkle:channel>dev</sparkle:channel>
             <sparkle:os>windows</sparkle:os>
-            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
-            <sparkle:version>0.0.1.1653176037</sparkle:version>
-            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
-            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653176037-Windows.zip"
-                       sparkle:version="0.0.1.1653176037"
-                       sparkle:dsaSignature="MD0CHQCn2P+41LJ7pHTodXPgqCxTtr0h6rRo67l0MlYvAhxELXMlM1UcWOJ1r1+X
-uRVMbLRsWh8Qu2wkM2a6
+            <msacn:commit>8914eb411483d6b5288dd03325f77738c7678a8a</msacn:commit>
+            <sparkle:version>0.0.1.1653235309</sparkle:version>
+            <pubDate>Sun, 22 May 2022 16:13:25 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653235514-Windows.zip"
+                       sparkle:version="0.0.1.1653235309"
+                       sparkle:dsaSignature="MDwCHQDaNzPaovxuTdtdGgBdFMHrmmqKmu+MpYwu9Q1BAhtd4mybZ2qU9NFT4kEN
+VsNuFAhfDG+asbFjiwA=
 "
-                       length="14769435"
+                       length="16796377"
                        type="application/zip"
             />
             <description><![CDATA[
@@ -53,18 +53,18 @@ uRVMbLRsWh8Qu2wkM2a6
         </item>
                 <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653235309</link>
             <sparkle:channel>dev</sparkle:channel>
             <sparkle:os>macos</sparkle:os>
-            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
-            <sparkle:version>0.0.1.1653176037</sparkle:version>
-            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
-            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653175969-Darwin.dmg"
-                       sparkle:version="0.0.1.1653176037"
-                       sparkle:dsaSignature="MDwCHEfOx6xMb2Q3WW+kpqee7Z6llPurCjx/RMWkG/wCHCLjsBYYxTZr5AT9EQBp
-Kvw2uqihcyXz5W2clRY=
+            <msacn:commit>8914eb411483d6b5288dd03325f77738c7678a8a</msacn:commit>
+            <sparkle:version>0.0.1.1653235309</sparkle:version>
+            <pubDate>Sun, 22 May 2022 16:13:25 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653235389-Darwin.dmg"
+                       sparkle:version="0.0.1.1653235309"
+                       sparkle:dsaSignature="MD0CHECl1JD52yZFiANXmazffQbYLSRuGD3bNtEqLM0CHQDFNwaHdFCGzhRISbCY
+v8Vrl2PpsE18JpGJUVUy
 "
-                       length="13145332"
+                       length="21191901"
                        type="application/octet-stream"
             />
             <description><![CDATA[
@@ -76,18 +76,18 @@ Kvw2uqihcyXz5W2clRY=
         </item>
                 <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653235309</link>
             <sparkle:channel>dev</sparkle:channel>
             <sparkle:os>ubuntu</sparkle:os>
-            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
-            <sparkle:version>0.0.1.1653176037</sparkle:version>
-            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
-            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobilesacn_0.0.1.1653175601_amd64.deb"
-                       sparkle:version="0.0.1.1653176037"
-                       sparkle:dsaSignature="MDwCHG01bk+RJVUMq7f/J5708UVccLmlrVbyqj4ppR4CHDRIAiLK9p64gB/BDDkq
-mPb5q2UCdqsxDgFnKWA=
+            <msacn:commit>8914eb411483d6b5288dd03325f77738c7678a8a</msacn:commit>
+            <sparkle:version>0.0.1.1653235309</sparkle:version>
+            <pubDate>Sun, 22 May 2022 16:13:25 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobilesacn_0.0.1.1653235309_amd64.deb"
+                       sparkle:version="0.0.1.1653235309"
+                       sparkle:dsaSignature="MDwCHAyNHJU/fJaG4eAy/g56eMVc13MJ5jlt6pVXlokCHHOoDR5+xrXYDzxyjWcN
+8uVf8f2g+CYS2uBkorI=
 "
-                       length="3064204"
+                       length="3064218"
                        type="application/octet-stream"
             />
             <description><![CDATA[
@@ -99,18 +99,18 @@ mPb5q2UCdqsxDgFnKWA=
         </item>
                 <item>
             <title>dev-latest</title>
-            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653176037</link>
+            <link>https://mobilesacn.dankeenan.org/releases/0.0.1.1653235309</link>
             <sparkle:channel>dev</sparkle:channel>
             <sparkle:os>ubuntu</sparkle:os>
-            <msacn:commit>2f8d9ce293982f2678f6dafb35f748f4454fd203</msacn:commit>
-            <sparkle:version>0.0.1.1653176037</sparkle:version>
-            <pubDate>Sat, 21 May 2022 23:38:08 +0000</pubDate>
-            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653175601-Linux.tar.gz"
-                       sparkle:version="0.0.1.1653176037"
-                       sparkle:dsaSignature="MD0CHFT+5WokvJxRemtKXFt0jXxd0r8SgvkjVJnWbJ8CHQDRE+NQlntFsskKrSxj
-9e3LBKqkJyK7FirNBCD2
+            <msacn:commit>8914eb411483d6b5288dd03325f77738c7678a8a</msacn:commit>
+            <sparkle:version>0.0.1.1653235309</sparkle:version>
+            <pubDate>Sun, 22 May 2022 16:13:25 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/dev-latest/mobile_sacn-0.0.1.1653235309-Linux.tar.gz"
+                       sparkle:version="0.0.1.1653235309"
+                       sparkle:dsaSignature="MD0CHQDLKhOzD8lUveIjSTl7Jpruq0ZKD1ot2R3xSTJjAhxXIsqH/lJm4wIXAXPD
+cr+MZJbdo+RmKS0XqERU
 "
-                       length="3058226"
+                       length="3058205"
                        type="application/gzip"
             />
             <description><![CDATA[
