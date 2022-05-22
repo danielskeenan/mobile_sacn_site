@@ -15,6 +15,7 @@
                     <i class="{{$iconClass}}"></i>
                 @endif
                 {{$asset['platformTitle']}}
+                ({{$asset['kind']}})
             </a>
         </li>
     @endforeach

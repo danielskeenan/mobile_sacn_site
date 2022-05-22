@@ -16,6 +16,8 @@
             <sparkle:version>{{$release['version']}}</sparkle:version>
             <pubDate>{{$release->getDate()->toRssString()}}</pubDate>
             <enclosure url="{{$asset['url']}}"
+                       sparkle:version="{{$release['version']}}"
+                       sparkle:dsaSignature="{{$asset['dsa']}}"
                        length="{{$asset['size']}}"
                        type="{{$asset['contentType']}}"
             />

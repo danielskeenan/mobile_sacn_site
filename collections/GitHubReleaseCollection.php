@@ -58,7 +58,7 @@ class GitHubReleaseCollection
         if (!self::workflowRunValid($runInfo) || !self::releaseValid($releaseInfo)) {
             return [];
         }
-        $release = self::createReleaseFromGithub($releaseInfo);
+        $release = GitHubRelease::createFromGithubApi($releaseInfo);
         $release->commitSha = $runInfo['workflow_runs'][0]['head_sha'];
 
         return [$release->toCollectionItem()];
@@ -86,7 +86,7 @@ class GitHubReleaseCollection
                     continue;
                 }
 
-                $releases[] = self::createReleaseFromGithub($releaseInfo);;
+                $releases[] = GitHubRelease::createFromGithubApi($releaseInfo);
             }
         } while ($paginator->hasNext());
 
@@ -130,35 +130,5 @@ class GitHubReleaseCollection
         }
 
         return true;
-    }
-
-    private static function createReleaseFromGithub(array $releaseInfo): GitHubRelease
-    {
-        $publishedDate = Carbon::createFromTimestampUTC(0);
-        $version = '';
-        $assets = [];
-        foreach ($releaseInfo['assets'] as $assetInfo) {
-            $platform = ReleasePlatform::fromFilename($assetInfo['name']);
-            if ($platform !== null && $platform->usesUpdater()) {
-                $asset = ReleaseAsset::createFromGitHub($assetInfo);
-                if ($publishedDate->isBefore($asset->pubDate)) {
-                    $publishedDate = $asset->pubDate;
-                }
-                if (empty($version)
-                    && preg_match('`[-_](\d+\.\d+\.\d+\.\d+)[-_]`', $assetInfo['name'], $matches) == 1) {
-                    $version = $matches[1];
-                }
-                $assets[] = $asset;
-            }
-        }
-        $release = new GitHubRelease();
-        $release->title = $releaseInfo['name'];
-        $release->version = $version;
-        $release->pubDate = $publishedDate;
-        $release->channel = ReleaseChannel::Dev;
-        $release->assets = $assets;
-        $release->notes = trim($releaseInfo['body']);
-
-        return $release;
     }
 }

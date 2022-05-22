@@ -8,15 +8,6 @@ enum ReleasePlatform: string
     case MacOs = 'macos';
     case Ubuntu = 'ubuntu';
 
-    public function filenameRegex(): string
-    {
-        return match ($this) {
-            ReleasePlatform::Windows => '`^.+-Windows\.msi$`',
-            ReleasePlatform::MacOs => '`^.+-Darwin\.dmg$`',
-            ReleasePlatform::Ubuntu => '`^.+\.deb$`',
-        };
-    }
-
     public function humanName(): string
     {
         return match ($this) {
@@ -26,22 +17,20 @@ enum ReleasePlatform: string
         };
     }
 
+    public function sortOrder(): int
+    {
+        return match ($this) {
+            ReleasePlatform::Windows => 1,
+            ReleasePlatform::MacOs => 2,
+            ReleasePlatform::Ubuntu => 3,
+        };
+    }
+
     public function usesUpdater(): bool
     {
         return match ($this) {
             ReleasePlatform::Windows, ReleasePlatform::MacOs => true,
             default => false,
         };
-    }
-
-    public static function fromFilename(string $filename): ?self
-    {
-        foreach (self::cases() as $platform) {
-            if (preg_match($platform->filenameRegex(), $filename) === 1) {
-                return $platform;
-            }
-        }
-
-        return null;
     }
 }

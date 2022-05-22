@@ -13,27 +13,26 @@ use Carbon\Carbon;
  */
 class ReleaseAsset
 {
-    public string $platform;
-    public string $platformTitle;
+    public ReleasePlatform $platform;
+    public string $kind;
     public string $url;
     public int $size;
     public string $contentType;
-    public Carbon $pubDate;
+    public string $dsa;
 
-    static public function createFromGitHub(array $assetInfo): self
+    static public function createFromGithubApi(array $assetInfo, array $manifestAssetInfo): ?self
     {
-        $asset = new ReleaseAsset();
-        $platform = ReleasePlatform::fromFilename($assetInfo['name']);
-        $asset->platform = $platform->value;
-        $asset->platformTitle = $platform->humanName();
+        $asset = new self();
+        $platform = ReleasePlatform::tryFrom($manifestAssetInfo['platform']);
+        if ($platform === null) {
+            return null;
+        }
+        $asset->platform = $platform;
+        $asset->kind = $manifestAssetInfo['kind'];
         $asset->url = $assetInfo['browser_download_url'];
         $asset->size = $assetInfo['size'] ?? 0;
         $asset->contentType = $assetInfo['content_type'] ?? "application/octet-stream";
-        $asset->pubDate = Carbon::createFromIsoFormat(
-            "YYYY-MM-DD\THH:mm:ss\Z",
-            $assetInfo['updated_at'],
-            "UTC"
-        );
+        $asset->dsa = $manifestAssetInfo['dsa'];
 
         return $asset;
     }
@@ -43,12 +42,13 @@ class ReleaseAsset
         // Jigsaw won't pass collection item values that are objects, so we must convert
         // to an array.
         return [
-            'platform' => $this->platform,
-            'platformTitle' => $this->platformTitle,
+            'platform' => $this->platform->value,
+            'platformTitle' => $this->platform->humanName(),
+            'kind' => $this->kind,
             'url' => $this->url,
             'size' => $this->size,
             'contentType' => $this->contentType,
-            'pubDate' => $this->pubDate,
+            'dsa' => $this->dsa,
         ];
     }
 }

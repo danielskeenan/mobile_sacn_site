@@ -2,8 +2,8 @@
 
 namespace App\Collections;
 
-enum ReleaseChannel
+enum ReleaseChannel: string
 {
-    case Release;
-    case Dev;
+    case Main = 'main';
+    case Dev = 'dev';
 }
