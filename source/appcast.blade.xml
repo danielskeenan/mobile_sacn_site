@@ -24,7 +24,7 @@
                         {!! $release->getContent() !!}
                         ]]>
             </description>
-            <sparkle:fullReleaseNotesLink>{{$page->baseUrl}}/releases</sparkle:fullReleaseNotesLink>
+            <sparkle:fullReleaseNotesLink>{{$page->baseUrl}}/releases/{{$release['version']}}</sparkle:fullReleaseNotesLink>
         </item>
         @endforeach
         @endforeach
