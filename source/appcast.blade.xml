@@ -12,7 +12,6 @@
             <link>{{$page->baseUrl}}/releases/{{$release['version']}}</link>
             <sparkle:channel>{{$release['channel']}}</sparkle:channel>
             <sparkle:os>{{$asset['platform']}}</sparkle:os>
-            <msacn:commit>{{$release['commit']}}</msacn:commit>
             <sparkle:version>{{$release['version']}}</sparkle:version>
             <pubDate>{{$release->getDate()->toRssString()}}</pubDate>
             <enclosure url="{{$asset['url']}}"

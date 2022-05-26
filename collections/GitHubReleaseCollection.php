@@ -86,7 +86,7 @@ class GitHubReleaseCollection
                     continue;
                 }
 
-                $releases[] = GitHubRelease::createFromGithubApi($releaseInfo);
+                $releases[] = GitHubRelease::createFromGithubApi($releaseInfo)->toCollectionItem();
             }
         } while ($paginator->hasNext());
 
