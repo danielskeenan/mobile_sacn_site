@@ -38,33 +38,17 @@ class GitHubReleaseCollection
     public function getItems(): array
     {
         return [
-            ...$this->getDevRelease(),
-            ...$this->getReleases(),
+            ...$this->getReleases(fn($releaseInfo) => !$releaseInfo['prerelease']),
         ];
     }
 
-    private function getDevRelease(): array
-    {
-        try {
-            $runInfo = $this->github->repo()->workflowRuns()->listRuns($this->username, $this->repo, 'main.yml', [
-                'branch' => 'main',
-                'status' => 'success',
-                'per_page' => 1,
-            ]);
-            $releaseInfo = $this->github->repo()->releases()->tag($this->username, $this->repo, "dev-latest");
-        } catch (\Http\Client\Exception) {
-            return [];
-        }
-        if (!self::workflowRunValid($runInfo) || !self::releaseValid($releaseInfo)) {
-            return [];
-        }
-        $release = GitHubRelease::createFromGithubApi($releaseInfo);
-        $release->commitSha = $runInfo['workflow_runs'][0]['head_sha'];
-
-        return [$release->toCollectionItem()];
-    }
-
-    private function getReleases(): array
+    /**
+     * @param callable $filterFn Receives the release info from the Github API. (See
+     *     https://docs.github.com/en/rest/releases/releases).
+     *
+     * @return array
+     */
+    private function getReleases(callable $filterFn): array
     {
         $releases = [];
         $paginator = new \Github\ResultPager($this->github);
@@ -82,7 +66,7 @@ class GitHubReleaseCollection
                 if (!self::releaseValid($releaseInfo)) {
                     return [];
                 }
-                if ($releaseInfo['prerelease']) {
+                if (!$filterFn($releaseInfo)) {
                     continue;
                 }
 

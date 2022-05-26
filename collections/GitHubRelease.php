@@ -11,7 +11,6 @@ class GitHubRelease
 {
     public string $title;
     public string $version;
-    public ?string $commitSha = null;
     public Carbon $pubDate;
     public ReleaseChannel $channel;
     public array $assets;
@@ -80,7 +79,6 @@ class GitHubRelease
         return [
             'title' => $this->title,
             'version' => $this->version,
-            'commit' => $this->commitSha,
             'published' => $this->pubDate,
             'channel' => strtolower($this->channel->name),
             // Jigsaw will only pass this to templates if it is an array.
