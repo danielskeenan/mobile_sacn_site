@@ -1,16 +1,8 @@
 <?php
 
 return [
-    'Getting Started' => [
-        'url' => 'docs/getting-started',
-        'children' => [],
-    ],
-    'Usage' => [
-        'url' => 'docs/usage',
-        'children' => [
-            'Channel Check' => 'docs/usage/chan_check'
-        ]
-    ],
+    'Getting Started' => 'https://docs.mobilesacn.dankeenan.org/getting-started.html',
+    'Usage' => 'https://docs.mobilesacn.dankeenan.org/usage/index.html',
     'Releases' => [
         'url' => 'releases',
     ],
