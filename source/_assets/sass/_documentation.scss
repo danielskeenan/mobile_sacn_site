@@ -1,6 +1,5 @@
-// Add your custom styles here
-
 article {
+    // Apply sane defaults to lists used in articles.
     ul, ol {
         @apply list-inside;
     }
@@ -11,5 +10,24 @@ article {
 
     ol {
         @apply list-decimal;
+    }
+
+    li {
+        ul, ol {
+            @apply .ml-5;
+        }
+    }
+
+    // Clamp the maximum size of images.
+    img {
+        &[src$="_screenshot.png"] {
+            max-width: 375px;
+            max-height: max-content;
+        }
+        // Button images, used in documentation.
+        &[src$="_button.svg"] {
+            display: inline-block;
+            max-height: 1.5em;
+        }
     }
 }

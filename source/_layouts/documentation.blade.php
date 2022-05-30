@@ -11,9 +11,9 @@
             @include('_nav.menu', ['items' => $page->navigation])
         </nav>
 
-        <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
+        <article class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
             @yield('content')
-        </div>
+        </article>
     </div>
 </section>
 @endsection

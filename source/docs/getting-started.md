@@ -20,4 +20,4 @@ please report an issue [here](https://github.com/danielskeenan/mobile_sacn/issue
 2. Click "Start" and use your mobile device's camera to scan the QR code and
    open the web UI.
 
-![Screenshot showing selected interfaces and QR code](/assets/img/screenshots/base_started.png)
+![Screenshot showing selected interfaces and QR code](/docs/base_started.png)
