@@ -25,7 +25,7 @@ return [
     'collections' => [
         'releases' => [
             'extends' => '_layouts.release',
-            'sort' => 'published',
+            'sort' => '-published',
             'path' => 'releases/{_version}',
             'getDate' => function ($page) {
                 return Carbon::createFromTimestampUTC($page->published);

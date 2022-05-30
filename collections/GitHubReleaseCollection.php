@@ -37,9 +37,20 @@ class GitHubReleaseCollection
 
     public function getItems(): array
     {
-        return [
+        $items = [
             ...$this->getReleases(fn($releaseInfo) => !$releaseInfo['prerelease']),
         ];
+        usort($items, function (GitHubRelease $a, GitHubRelease $b) {
+            if ($a->pubDate->isBefore($b->pubDate)) {
+                return 1;
+            } elseif ($a->pubDate->isAfter($b->pubDate)) {
+                return -1;
+            }
+
+            return 0;
+        });
+
+        return array_map(fn(GitHubRelease $release) => $release->toCollectionItem(), $items);
     }
 
     /**
@@ -70,7 +81,7 @@ class GitHubReleaseCollection
                     continue;
                 }
 
-                $releases[] = GitHubRelease::createFromGithubApi($releaseInfo)->toCollectionItem();
+                $releases[] = GitHubRelease::createFromGithubApi($releaseInfo);
             }
         } while ($paginator->hasNext());
 

@@ -1,1 +1,15 @@
 // Add your custom styles here
+
+article {
+    ul, ol {
+        @apply list-inside;
+    }
+
+    ul {
+        @apply list-disc;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+}

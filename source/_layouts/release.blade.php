@@ -7,16 +7,16 @@
                 @include('_nav.menu', ['items' => $page->navigation])
             </nav>
 
-            <div class="w-full lg:w-3/5 break-words lg:pl-4 border-b border-blue-200 mb-10 pb-4" v-pre>
+            <article class="w-full lg:w-3/5 break-words lg:pl-4 border-b border-blue-200 mb-10 pb-4" v-pre>
                 <h1 class="leading-none mb-2">{{ $page->title }}</h1>
-                <p>Released {{ $page->getDate()->toDateString() }}</p>
+                <p>Released {{ $page->getDate()->toFormattedDateString() }}</p>
                 <div class="DocSearch-content">
                     @yield('content')
                 </div>
                 <div>
                     @include('_components.release-assets', ['release' => $page])
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 @endsection

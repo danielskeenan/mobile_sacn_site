@@ -13,13 +13,15 @@ pagination:
                 @include('_nav.menu', ['items' => $page->navigation])
             </nav>
 
-            @foreach($pagination->items as $release)
-                @include('_components.release-preview-inline')
+            <div>
+                @foreach($pagination->items as $release)
+                    @include('_components.release-preview-inline')
 
-                @if (! $loop->last)
-                    <hr class="w-full border-b mt-2 mb-6">
-                @endif
-            @endforeach
+                    @if (! $loop->last)
+                        <hr class="w-full border-b mt-2 mb-6">
+                    @endif
+                @endforeach
+            </div>
         </div>
     </section>
 @endsection

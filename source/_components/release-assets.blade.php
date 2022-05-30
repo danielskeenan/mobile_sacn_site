@@ -1,5 +1,5 @@
 <h3>Downloads</h3>
-<ul>
+<ul class="list-none" role="list">
     @foreach($release->assets as $asset)
         @php
             $iconClass = match($asset['platform']) {

@@ -1,4 +1,4 @@
-<div class="flex flex-col mb-4">
+<article class="flex flex-col mb-4">
     <h2 class="text-3xl my-0">
         <a href="{{ $release->getUrl() }}"
            title="Read more - {{ $release->title }}"
@@ -8,7 +8,7 @@
     </h2>
 
     <div>
-        <p class="mt-0">Released {{ $release->getDate()->toDateString() }}</p>
+        <p class="mt-0">Released {{ $release->getDate()->toFormattedDateString() }}</p>
         {!! $release->getContent() !!}
     </div>
 
@@ -21,4 +21,4 @@
        class="uppercase font-semibold tracking-wide mb-2">
         More Info
     </a>
-</div>
+</article>
