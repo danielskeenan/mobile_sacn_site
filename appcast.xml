@@ -131,7 +131,10 @@ eE9TqI9DEtcWjugdpTMn
                        type="application/octet-stream"
             />
             <description><![CDATA[
-                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/v0.1.1</p>
+                        <ul>
+<li>Integrate with <a href="https://sentry.io">Sentry</a> to provide error reporting.</li>
+<li>Clear saved settings on startup by holding down <kbd>Shift</kbd> while starting the program.</li>
+</ul>
 
                         ]]>
             </description>
@@ -153,7 +156,10 @@ C2Re60xEZa8ALSOvhYfe
                        type="application/zip"
             />
             <description><![CDATA[
-                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/v0.1.1</p>
+                        <ul>
+<li>Integrate with <a href="https://sentry.io">Sentry</a> to provide error reporting.</li>
+<li>Clear saved settings on startup by holding down <kbd>Shift</kbd> while starting the program.</li>
+</ul>
 
                         ]]>
             </description>
@@ -175,7 +181,10 @@ rA+2cRrdY/YdKk+kS9DaSQ==
                        type="application/octet-stream"
             />
             <description><![CDATA[
-                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/v0.1.1</p>
+                        <ul>
+<li>Integrate with <a href="https://sentry.io">Sentry</a> to provide error reporting.</li>
+<li>Clear saved settings on startup by holding down <kbd>Shift</kbd> while starting the program.</li>
+</ul>
 
                         ]]>
             </description>
@@ -197,7 +206,10 @@ J+ytdtxLo5wW29csOXI=
                        type="application/octet-stream"
             />
             <description><![CDATA[
-                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/v0.1.1</p>
+                        <ul>
+<li>Integrate with <a href="https://sentry.io">Sentry</a> to provide error reporting.</li>
+<li>Clear saved settings on startup by holding down <kbd>Shift</kbd> while starting the program.</li>
+</ul>
 
                         ]]>
             </description>
@@ -219,7 +231,10 @@ rDxt9WQzJ1OTgwcNPYaNuw==
                        type="application/gzip"
             />
             <description><![CDATA[
-                        <p><strong>Full Changelog</strong>: https://github.com/danielskeenan/mobile_sacn/commits/v0.1.1</p>
+                        <ul>
+<li>Integrate with <a href="https://sentry.io">Sentry</a> to provide error reporting.</li>
+<li>Clear saved settings on startup by holding down <kbd>Shift</kbd> while starting the program.</li>
+</ul>
 
                         ]]>
             </description>
