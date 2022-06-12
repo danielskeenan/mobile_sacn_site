@@ -6,6 +6,136 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
                         <item>
+            <title>v0.2.0</title>
+            <link>https://mobilesacn.dankeenan.org/releases/0.2.0</link>
+            <sparkle:channel>main</sparkle:channel>
+            <sparkle:os>windows</sparkle:os>
+            <sparkle:version>0.2.0</sparkle:version>
+            <pubDate>Sun, 12 Jun 2022 16:26:37 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/v0.2.0/mobile_sacn-0.2.0-Windows.msi"
+                       sparkle:version="0.2.0"
+                       sparkle:dsaSignature="MD0CHAeBtYiOJZK70oQxgJ173mxKwBeIYcw08itYQ2ICHQDklEN1aLnnEzKLGfF8
+VGhrn4A91WkTt5/lcxu0
+"
+                       length="31024544"
+                       type="application/octet-stream"
+            />
+            <description><![CDATA[
+                        <ul>
+<li>New help system, accessible from the mobile interface, in the base program, and <a href="https://docs.mobilesacn.dankeenan.org/">online</a>.</li>
+<li>Fix some startup crashes related to error reporting.</li>
+<li>Fix macOS packages.</li>
+</ul>
+
+                        ]]>
+            </description>
+            <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases/0.2.0</sparkle:fullReleaseNotesLink>
+        </item>
+                <item>
+            <title>v0.2.0</title>
+            <link>https://mobilesacn.dankeenan.org/releases/0.2.0</link>
+            <sparkle:channel>main</sparkle:channel>
+            <sparkle:os>windows</sparkle:os>
+            <sparkle:version>0.2.0</sparkle:version>
+            <pubDate>Sun, 12 Jun 2022 16:26:37 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/v0.2.0/mobile_sacn-0.2.0-Windows.zip"
+                       sparkle:version="0.2.0"
+                       sparkle:dsaSignature="MDwCHAYKGwPavSPtYdfMnT8oX+TyGbmlc2YO5r8Fn+cCHEUlxVx855ib71N8vqGE
+LZSXWi553+IIxDlPqL0=
+"
+                       length="30879388"
+                       type="application/zip"
+            />
+            <description><![CDATA[
+                        <ul>
+<li>New help system, accessible from the mobile interface, in the base program, and <a href="https://docs.mobilesacn.dankeenan.org/">online</a>.</li>
+<li>Fix some startup crashes related to error reporting.</li>
+<li>Fix macOS packages.</li>
+</ul>
+
+                        ]]>
+            </description>
+            <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases/0.2.0</sparkle:fullReleaseNotesLink>
+        </item>
+                <item>
+            <title>v0.2.0</title>
+            <link>https://mobilesacn.dankeenan.org/releases/0.2.0</link>
+            <sparkle:channel>main</sparkle:channel>
+            <sparkle:os>macos</sparkle:os>
+            <sparkle:version>0.2.0</sparkle:version>
+            <pubDate>Sun, 12 Jun 2022 16:26:37 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/v0.2.0/mobile_sacn-0.2.0-Darwin.dmg"
+                       sparkle:version="0.2.0"
+                       sparkle:dsaSignature="MDwCHFgWBtP/PMwagu7mgHeiiwddi46/m/EsVESAoTMCHExeRhy0wNc0csTHv24o
+YZp+V/ClKdNEboLHn/w=
+"
+                       length="7181904"
+                       type="application/octet-stream"
+            />
+            <description><![CDATA[
+                        <ul>
+<li>New help system, accessible from the mobile interface, in the base program, and <a href="https://docs.mobilesacn.dankeenan.org/">online</a>.</li>
+<li>Fix some startup crashes related to error reporting.</li>
+<li>Fix macOS packages.</li>
+</ul>
+
+                        ]]>
+            </description>
+            <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases/0.2.0</sparkle:fullReleaseNotesLink>
+        </item>
+                <item>
+            <title>v0.2.0</title>
+            <link>https://mobilesacn.dankeenan.org/releases/0.2.0</link>
+            <sparkle:channel>main</sparkle:channel>
+            <sparkle:os>ubuntu</sparkle:os>
+            <sparkle:version>0.2.0</sparkle:version>
+            <pubDate>Sun, 12 Jun 2022 16:26:37 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/v0.2.0/mobilesacn_0.2.0_amd64.deb"
+                       sparkle:version="0.2.0"
+                       sparkle:dsaSignature="MD0CHQDCi8ZkQThatPxOFkoRSF1Q3ZDHLXeBEaQEtOi5AhxxKg46jWRGZ9wzBXKK
+M38VotjOp6FyDcYn23/o
+"
+                       length="5202378"
+                       type="application/octet-stream"
+            />
+            <description><![CDATA[
+                        <ul>
+<li>New help system, accessible from the mobile interface, in the base program, and <a href="https://docs.mobilesacn.dankeenan.org/">online</a>.</li>
+<li>Fix some startup crashes related to error reporting.</li>
+<li>Fix macOS packages.</li>
+</ul>
+
+                        ]]>
+            </description>
+            <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases/0.2.0</sparkle:fullReleaseNotesLink>
+        </item>
+                <item>
+            <title>v0.2.0</title>
+            <link>https://mobilesacn.dankeenan.org/releases/0.2.0</link>
+            <sparkle:channel>main</sparkle:channel>
+            <sparkle:os>ubuntu</sparkle:os>
+            <sparkle:version>0.2.0</sparkle:version>
+            <pubDate>Sun, 12 Jun 2022 16:26:37 +0000</pubDate>
+            <enclosure url="https://github.com/danielskeenan/mobile_sacn/releases/download/v0.2.0/mobile_sacn-0.2.0-Linux.tar.gz"
+                       sparkle:version="0.2.0"
+                       sparkle:dsaSignature="MDwCHECtgFvjzZxgwYkVaROaLjJvouEKMwFr4wmcL3wCHF36gHDj9fHcJcCjKCqX
+hry46ecijt1Klg6HS1c=
+"
+                       length="5202591"
+                       type="application/gzip"
+            />
+            <description><![CDATA[
+                        <ul>
+<li>New help system, accessible from the mobile interface, in the base program, and <a href="https://docs.mobilesacn.dankeenan.org/">online</a>.</li>
+<li>Fix some startup crashes related to error reporting.</li>
+<li>Fix macOS packages.</li>
+</ul>
+
+                        ]]>
+            </description>
+            <sparkle:fullReleaseNotesLink>https://mobilesacn.dankeenan.org/releases/0.2.0</sparkle:fullReleaseNotesLink>
+        </item>
+                                <item>
             <title>v0.1.1</title>
             <link>https://mobilesacn.dankeenan.org/releases/0.1.1</link>
             <sparkle:channel>main</sparkle:channel>
