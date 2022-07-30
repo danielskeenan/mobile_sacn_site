@@ -1,5 +1,45 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Hello, world!
+    <div class="row">
+        <div class="jumbotron app-hero">
+            <h1 class="display-5"><img src="{{ asset("assets/logo.svg") }}" alt="">&nbsp;Mobile sACN</h1>
+            <p class="h2">Remote sACN Testing Tool</p>
+
+            <p>
+                Mobile sACN allows remote troubleshooting of sACN signals. Your mobile device connects to a program on your computer that handles sACN traffic.
+            </p>
+
+            <p>
+                <a class="btn btn-primary" href="https://docs.mobilesacn.dankeenan.org">User Manual</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="row app-screenshots">
+        <div class="col">
+            <figure>
+                <img src="{{ asset('assets/screenshots/chancheck.png') }}" alt="Screenshot of channel check mode">
+                <figcaption>
+                    Run through addresses in any universe. Use per-address-priority to avoid affecting ranges you're not interested in.
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure>
+                <img src="{{ asset('assets/screenshots/control_keypad.png') }}" alt="Screenshot of live control mode's keypad interface">
+                <figcaption>
+                    Adjust multiple channels in one universe using faders or a simple command-line interface.
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure>
+                <img src="{{ asset('assets/screenshots/levels_bars.png') }}" alt="Screenshot of view levels mode">
+                <figcaption>
+                    View active levels from multiple sources.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
 {% endblock %}

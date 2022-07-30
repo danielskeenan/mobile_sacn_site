@@ -1,5 +1,44 @@
 @import "bs";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+
+@import "jumbotron";
 
 .navbar-brand > img {
     max-height: $navbar-brand-height;
+}
+
+@for $h from 1 through 6 {
+    h#{$h} img {
+        height: 1em;
+        vertical-align: baseline;
+    }
+}
+
+.app-topbar {
+    margin-bottom: map-get($spacers, 4);
+}
+
+.app-hero {
+    @extend .bg-light;
+    @extend .text-body;
+
+    //.btn {
+    //    margin-right: map-get($spacers, 3);
+    //}
+}
+
+.app-screenshots {
+    figure {
+        @extend .figure;
+
+        & > img {
+            @extend .figure-img;
+        }
+
+        & > figcaption {
+            @extend .figure-caption;
+        }
+    }
 }
