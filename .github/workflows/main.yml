@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      APP_ENV: prod
     steps:
       - uses: actions/checkout@v2
       - name: Setup PHP
