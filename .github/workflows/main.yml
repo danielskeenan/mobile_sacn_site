@@ -43,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm run build
-          bin/console dump-static-site
+          php bin/console dump-static-site
       - name: Upload built website
         uses: actions/upload-artifact@v3
         with:
