@@ -3,6 +3,7 @@
 @import "@fortawesome/fontawesome-free/scss/solid";
 @import "@fortawesome/fontawesome-free/scss/brands";
 
+// Some style fixes on top of the bootstrap defaults.
 .navbar-brand > img {
     max-height: $navbar-brand-height;
 }
@@ -12,6 +13,10 @@
         height: 1em;
         vertical-align: baseline;
     }
+}
+
+ul.list-inline > li {
+    @extend .list-inline-item;
 }
 
 .app-topbar {

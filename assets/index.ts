@@ -35,7 +35,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const downloadButtonMain = document.getElementById('app-download-main') as HTMLAnchorElement | null;
     const downloadButtonMainDesc = document.getElementById(
       'app-download-main-desc');
-    if (downloadButton === null || downloadButtonMain === null || downloadButtonMainDesc === null) {
+    const downloadButtonDropdownToggle = document.getElementById(
+      'app-download-dropdown');
+    const downloadButtonOthers = document.getElementById('app-download-others');
+    if (downloadButton === null || downloadButtonMain === null || downloadButtonMainDesc === null
+      || downloadButtonDropdownToggle === null || downloadButtonOthers === null) {
         console.error('Download button not in DOM.');
         return;
     }
@@ -47,13 +51,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Decide which OS we're on.
     const osName = bowser.getOS().name;
+    let downloadButtonSet = false;
     if (osName !== undefined && BROWSER_OS_MAP.has(osName)) {
         const asset = Object.values(releaseManifest.assets)
           .find(a => a.platform === BROWSER_OS_MAP.get(osName));
         if (asset !== undefined) {
             downloadButtonMain.href = asset.url;
             downloadButtonMainDesc.innerText = `Download ${asset.kind} (${asset.platformTitle})`;
+            downloadButtonSet = true;
         }
+    }
+    if (!downloadButtonSet) {
+        // Remove the main download button and add its text to the dropdown toggler.
+        const downloadText = downloadButtonMain.innerHTML;
+        downloadButtonMain.remove();
+        downloadButton.className = 'dropdown';
+        downloadButtonDropdownToggle.classList.remove('dropdown-toggle-split');
+        downloadButtonDropdownToggle.innerHTML = downloadText;
     }
 
     return;
