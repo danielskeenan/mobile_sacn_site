@@ -1,0 +1,24 @@
+@import "bs";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+
+// Some style fixes on top of the bootstrap defaults.
+.navbar-brand > img {
+    max-height: $navbar-brand-height;
+}
+
+@for $h from 1 through 6 {
+    h#{$h} img {
+        height: 1em;
+        vertical-align: baseline;
+    }
+}
+
+ul.list-inline > li {
+    @extend .list-inline-item;
+}
+
+.app-topbar {
+    margin-bottom: map-get($spacers, 4);
+}

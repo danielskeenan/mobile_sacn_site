@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Mobile sACN{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+<header>
+    <nav class="navbar bg-light app-topbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ path('index') }}">
+                <img src="{{ asset('assets/logo.svg') }}" alt="">&nbsp;Mobile sACN
+            </a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    {% block container %}
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+    {% endblock %}
+</div>
+
+<footer>
+    <div class="navbar bg-light app-bottombar">
+        <div class="container">
+            <div class="w-100 d-flex justify-content-end">
+                <a href="https://github.com/danielskeenan/mobile_sacn">
+                    <i class="fa-brands fa-github"></i>&nbsp;Development on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

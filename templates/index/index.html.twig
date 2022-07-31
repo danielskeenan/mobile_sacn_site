@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('index') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('index') }}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="jumbotron app-hero">
+            <h1 class="display-5"><img src="{{ asset("assets/logo.svg") }}" alt="">&nbsp;Mobile sACN</h1>
+            <p class="h2">Remote sACN Testing Tool</p>
+
+            <p>
+                Mobile sACN allows remote troubleshooting of sACN signals. Your mobile device connects to a program on your computer that handles sACN traffic.
+            </p>
+
+            <ul class="list-inline">
+                {# Download button #}
+                <li>
+                    <div class="btn-group" id="app-download" data-release-manifest="{{ releaseManifest|json_encode }}">
+                        <a href="#" class="btn btn-success" id="app-download-main">
+                            <i class="fa-solid fa-download"></i>&nbsp;<span id="app-download-main-desc">Download</span>
+                        </a>
+                        <button class="btn btn-success dropdown-toggle dropdown-toggle-split" id="app-download-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Show Other Downloads</span>
+                        </button>
+                        <ul class="dropdown-menu" id="app-download-others">
+                            {% for releaseAsset in releaseManifest.assets %}
+                                <li>
+                                    <a class="dropdown-item" href="{{ releaseAsset.url }}">
+                                        {{ _self.download_icon(releaseAsset.platform) }}&nbsp;{{ releaseAsset.kind }} ({{ releaseAsset.platform.title }})
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a class="btn btn-primary" href="https://docs.mobilesacn.dankeenan.org">User Manual</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row app-screenshots">
+        <div class="col">
+            <figure>
+                <img src="{{ asset('assets/screenshots/chancheck.png') }}" alt="Screenshot of channel check mode">
+                <figcaption>
+                    Run through addresses in any universe. Use per-address-priority to avoid affecting ranges you're not interested in.
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure>
+                <img src="{{ asset('assets/screenshots/control_keypad.png') }}" alt="Screenshot of live control mode's keypad interface">
+                <figcaption>
+                    Adjust multiple channels in one universe using faders or a simple command-line interface.
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure>
+                <img src="{{ asset('assets/screenshots/levels_bars.png') }}" alt="Screenshot of view levels mode">
+                <figcaption>
+                    View active levels from multiple sources.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+{% endblock %}
+
+{% macro download_icon(platform) %}
+    {% if platform.value == 'windows' %}
+        <i class="fa-brands fa-windows"></i>
+    {% elseif platform.value == 'macos' %}
+        <i class="fa-brands fa-apple"></i>
+    {% elseif platform.value == 'ubuntu' %}
+        <i class="fa-brands fa-ubuntu"></i>
+    {% else %}
+        <i class="fa-solid fa-download"></i>
+    {% endif %}
+{% endmacro %}

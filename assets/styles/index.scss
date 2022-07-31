@@ -1,0 +1,26 @@
+@import "app";
+
+@import "jumbotron";
+
+.app-hero {
+    @extend .bg-light;
+    @extend .text-body;
+
+    //.btn {
+    //    margin-right: map-get($spacers, 3);
+    //}
+}
+
+.app-screenshots {
+    figure {
+        @extend .figure;
+
+        & > img {
+            @extend .figure-img;
+        }
+
+        & > figcaption {
+            @extend .figure-caption;
+        }
+    }
+}
