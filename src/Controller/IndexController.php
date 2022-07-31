@@ -11,17 +11,37 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 class IndexController extends AbstractController
 {
 
+    public function __construct(
+        private readonly string $githubRepoOwner,
+        private readonly string $githubRepoName,
+        private readonly HttpClientInterface $githubClient
+    ) {
+    }
+
     #[Route('/', name: 'index')]
-    public function index(string $githubRepoOwner, string $githubRepoName, HttpClientInterface $githubClient): Response
+    public function index(): Response
     {
-        // Get latest release
-        $releaseInfo = $githubClient->request('GET', "https://api.github.com/repos/$githubRepoOwner/$githubRepoName/releases/latest")
+        $manifest = $this->getReleaseManifest();
+
+        return $this->render('index/index.html.twig', [
+            'releaseManifest' => $manifest,
+        ]);
+    }
+
+    /**
+     * Get manifest for the latest release.
+     *
+     * @return ReleaseManifest|null
+     */
+    private function getReleaseManifest(): ?ReleaseManifest
+    {
+        $releaseInfo = $this->githubClient->request('GET', "https://api.github.com/repos/{$this->githubRepoOwner}/{$this->githubRepoName}/releases/latest")
             ->toArray();
         // Find manifest.
         $manifest = null;
         foreach ($releaseInfo['assets'] as $assetInfo) {
             if ($assetInfo['name'] === 'manifest.json') {
-                $manifest = $githubClient->request('GET', $assetInfo['url'], [
+                $manifest = $this->githubClient->request('GET', $assetInfo['url'], [
                     'headers' => [
                         'Accept: application/octet-stream',
                     ],
@@ -38,8 +58,6 @@ class IndexController extends AbstractController
             }
         }
 
-        return $this->render('index/index.html.twig', [
-            'releaseManifest' => $manifest,
-        ]);
+        return $manifest;
     }
 }
