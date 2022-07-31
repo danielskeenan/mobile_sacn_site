@@ -30,6 +30,14 @@
                         </button>
                         <ul class="dropdown-menu" id="app-download-others">
                             {% for releaseAsset in releaseManifest.assets %}
+                                {% if releaseAsset.platform.value == 'ubuntu' and apt_repo_added is not defined %}
+                                    <li>
+                                        <a class="dropdown-item" href="#apt-repo" data-bs-toggle="modal">
+                                            <i class="fa-brands fa-ubuntu"></i>&nbsp;Apt Repository
+                                        </a>
+                                    </li>
+                                    {% set apt_repo_added = true %}
+                                {% endif %}
                                 <li>
                                     <a class="dropdown-item" href="{{ releaseAsset.url }}">
                                         {{ _self.download_icon(releaseAsset.platform) }}&nbsp;{{ releaseAsset.kind }} ({{ releaseAsset.platform.title }})
@@ -44,6 +52,41 @@
                     <a class="btn btn-primary" href="https://docs.mobilesacn.dankeenan.org">User Manual</a>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="apt-repo">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Apt Repository</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Automatic Setup</h5>
+                    <p>
+                        Download and install
+                        <a href="https://apt.mobilesacn.dankeenan.org/pool/main/mobile-sacn-repo_1.0.0_all.deb">this package</a>
+                        to automatically set up the Apt repository on your system.
+                    </p>
+                    <h5>Manual Setup</h5>
+                    <ol>
+                        <li>Open your terminal application.</li>
+                        <li>
+                            Add the key for the repository:
+                            <pre><code>sudo curl -o /usr/share/keyrings/mobilesacn-archive-keyring.gpg https://apt.mobilesacn.dankeenan.org/mobilesacn-archive-keyring.gpg</code></pre>
+                        </li>
+                        <li>
+                            Add the apt repository:
+                            <pre><code>echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/mobilesacn-archive-keyring.gpg] https://apt.mobilesacn.dankeenan.org stable main' | sudo tee /etc/apt/sources.list.d/mobile-sacn.list</code></pre>
+                        </li>
+                        <li>
+                            Update your apt cache:
+                            <pre><code>sudo apt-get update</code></pre>
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -76,13 +119,13 @@
 {% endblock %}
 
 {% macro download_icon(platform) %}
-    {% if platform.value == 'windows' %}
+    {%- if platform.value == 'windows' -%}
         <i class="fa-brands fa-windows"></i>
-    {% elseif platform.value == 'macos' %}
+    {%- elseif platform.value == 'macos' -%}
         <i class="fa-brands fa-apple"></i>
-    {% elseif platform.value == 'ubuntu' %}
+    {%- elseif platform.value == 'ubuntu' -%}
         <i class="fa-brands fa-ubuntu"></i>
-    {% else %}
+    {%- else -%}
         <i class="fa-solid fa-download"></i>
-    {% endif %}
+    {%- endif -%}
 {% endmacro %}
