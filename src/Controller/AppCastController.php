@@ -21,7 +21,7 @@ class AppCastController extends AbstractController
     }
 
     #[Route('/appcast.xml', name: 'appcast')]
-    public function appcast(Request $request): Response
+    public function appcast(): Response
     {
         $manifest = $this->releaseInfoProvider->getManifest();
 
@@ -71,7 +71,6 @@ class AppCastController extends AbstractController
         ]);
         $response = new Response($responseBody);
         $response->headers->set('Content-Type', 'application/xml; charset=utf-8');
-        $response->prepare($request);
 
         return $response;
     }
