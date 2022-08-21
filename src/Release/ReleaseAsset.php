@@ -6,6 +6,7 @@ class ReleaseAsset implements \JsonSerializable
 {
 
     public ?string $url = null;
+    public ?string $contentType;
 
     public function __construct(
         private readonly string $filename,

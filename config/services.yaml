@@ -8,6 +8,7 @@ imports:
 parameters:
   app.github_repo_owner: '%env(resolve:GITHUB_REPO_OWNER)%'
   app.github_repo_name: '%env(resolve:GITHUB_REPO_NAME)%'
+  app.public_baseurl: '%env(resolve:PUBLIC_BASEURL)%'
 
 services:
   # default configuration for services in *this* file
@@ -17,6 +18,8 @@ services:
     bind:
       $githubRepoOwner: '%app.github_repo_owner%'
       $githubRepoName: '%app.github_repo_name%'
+      $environment: '%kernel.environment%'
+      $public_baseurl: '%app.public_baseurl%'
 
   # makes classes in src/ available to be used as services
   # this creates a service per class whose id is the fully-qualified class name

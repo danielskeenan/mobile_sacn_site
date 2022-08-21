@@ -6,6 +6,7 @@ use Carbon\CarbonImmutable;
 
 class ReleaseManifest implements \JsonSerializable
 {
+    public ?string $description;
 
     /**
      * @param string                      $title
